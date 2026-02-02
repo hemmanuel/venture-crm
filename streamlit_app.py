@@ -177,19 +177,19 @@ CARD_CSS = """
         }
 
         .card-icon {
-            margin-bottom: 12px;
+            margin-bottom: 0; /* Remove extra margin, rely on gap */
         }
 
         .card-info {
             width: 100%;
             padding-right: 0;
-            margin-bottom: 16px;
+            margin-bottom: 0; /* Remove extra margin, rely on gap */
             border-right: none;
         }
 
         .card-dna {
             width: 100%;
-            margin-bottom: 16px;
+            margin-bottom: 0; /* Remove extra margin, rely on gap */
         }
 
         /* 1 Column Grid: Maximum visibility for each item */
@@ -217,7 +217,7 @@ CARD_CSS = """
             background-color: #F9FAFB;
             padding: 12px;
             border-radius: 8px;
-            margin-top: 0;
+            margin-top: 0; /* Let gap handle spacing */
             border: 1px solid #F3F4F6;
         }
     }
