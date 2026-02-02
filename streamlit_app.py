@@ -87,7 +87,7 @@ CARD_CSS = """
         max-width: 1600px !important; 
     }
 
-    /* Card Styling - NOW AN ANCHOR TAG */
+    /* Card Styling - RESTORED TO ANCHOR TAG */
     a.crm-card {
         display: flex;
         flex-wrap: wrap;
@@ -585,9 +585,9 @@ def generate_card_html(row, idx):
     meta_html += "</div>"
 
     # Use ANCHOR TAG wrapper for robust click detection
-    # Use simple index number as ID
+    # Use javascript:void(0) to prevent scroll jump
     return f"""
-    <a class="crm-card" href="#" id="{idx}">
+    <a class="crm-card" href="javascript:void(0);" id="{idx}">
         <div class="card-icon">
             <div style="width: 48px; height: 48px; background-color: {bg_color}; color: white; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 16px;">
                 {initials}
